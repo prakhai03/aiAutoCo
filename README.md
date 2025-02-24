@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# AI AutoComplete 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![AI AutoComplete](public/artificial-intelligence.png)
 
-Currently, two official plugins are available:
+## 🌟 Overview
+AI AutoComplete is a powerful **browser extension** that provides intelligent autocomplete suggestions as you type. Built with **JavaScript, TypeScript, and AI APIs**, it enhances the typing experience by predicting and suggesting relevant text completions in input fields and text areas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Features
+- ✅ **Real-time autocomplete suggestions**
+- 🔄 **API call cancellation** when switching inputs
+- ⏳ **Debounced API calls** for efficient performance
+- 🖱️ **Auto-abort when clicking outside an input box**
+- ⚡ **Lightweight and fast integration**
 
-## Expanding the ESLint configuration
+## 📸 Demo
+![Demo](public/demo.gif)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📂 Project Structure
+```
+aiAutoCo/
+│── public/                 # Static assets (icons, manifest, etc.)
+│── src/                    # Source code (React-based UI components)
+│── index.html              # Main HTML file
+│── content.js              # Main content script handling input events
+│── autoCompleter.js        # Handles API requests and autocomplete logic
+│── manifest.json           # Chrome extension manifest
+│── vite.config.ts          # Build configuration
+│── package.json            # Dependencies and scripts
+└── README.md               # This file!
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Installation
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/prakhai03/aiAutoCo.git
+   cd aiAutoCo
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run the development server:
+   ```sh
+   npm run dev
+   ```
+4. Load the extension in Chrome:
+   - Go to `chrome://extensions/`
+   - Enable **Developer mode** (top right)
+   - Click **Load unpacked**
+   - Select the `public/` folder
+   
+## 🔧 Technologies Used
+- **JavaScript & TypeScript** – Core logic & API handling
+- **Vite** – Fast build tool
+- **React (for UI components)** – Enhancing interactivity
+- **Chrome Extensions API** – Injecting auto-complete functionality
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## ⚡ Usage
+1. Open any webpage with an input field or textarea.
+2. Start typing and wait for AI-powered suggestions.
+3. Press `Tab` or `→` to accept a suggestion, or `Esc` to dismiss it.
+4. If you click outside the input box, any running API request will be **automatically aborted**.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🤝 Contributing
+Contributions are welcome! Feel free to **fork** this repo, make changes, and submit a PR.
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+Made with ❤️ by [Prakhar Khare](https://github.com/prakhai03) 🚀
+
